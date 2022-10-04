@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './hello_world_screen.dart';
+import './plane_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   final String title;
@@ -23,6 +24,12 @@ class HomeScreen extends StatelessWidget {
                           builder: (_) => const HelloWorldScreen()))
                     },
                 child: const Text('Hello, world!')),
+            ElevatedButton(
+                onPressed: () => {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (_) => const PlaneScreen()))
+                    },
+                child: const Text('Plane')),
           ],
         ),
       ),
