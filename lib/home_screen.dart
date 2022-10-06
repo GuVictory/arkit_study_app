@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './hello_world_screen.dart';
 import './plane_screen.dart';
+import './geometric_shapes_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   final String title;
@@ -30,6 +31,12 @@ class HomeScreen extends StatelessWidget {
                           builder: (_) => const PlaneScreen()))
                     },
                 child: const Text('Plane')),
+            ElevatedButton(
+                onPressed: () => {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (_) => const GeometricShapesScreen()))
+                    },
+                child: const Text('Geometric Shapes')),
           ],
         ),
       ),
